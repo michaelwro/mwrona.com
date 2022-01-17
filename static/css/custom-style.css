@@ -1,0 +1,10 @@
+footer {
+    font-size: 14px;
+}
+
+.right-icons {
+    float: right;
+    /* display: inline-block;
+    list-style: none;
+    margin-left: 0; */
+}
