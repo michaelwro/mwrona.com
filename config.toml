@@ -37,7 +37,7 @@ unsafe = true
 [[params.social]]
     name    = "YouTube"
     icon    = "youtube"
-    url     = ""
+    url     = "/"
 
 
 
@@ -58,41 +58,26 @@ unsafe = true
 post = "/post/:year/:month/:day/:slug/"
 
 [[menu.main]]
-    name = "education"
-    url = "/education/"
+    name = "experience"
+    url = "/experience/"
     weight = 1
 
 [[menu.main]]
-    name = "experience"
-    url = "/experience/"
+    name = "education"
+    url = "/education/"
     weight = 2
-
-[[menu.main]]
-    name = "awards"
-    url = "/awards/"
-    weight = 3
 
 [[menu.main]]
     name = "skills"
     url = "/skills/"
+    weight = 3
+
+[[menu.main]]
+    name = "awards"
+    url = "/awards/"
     weight = 4
 
 [[menu.main]]
     name = "blog"
     url = "https://mwrona.com"
     weight = 5
-
-
-# [[menu.main]]
-# name = "Categories"
-# url = "/categories/"
-# weight = 1
-# [[menu.main]]
-# name = "Tags"
-# url = "/tags/"
-# weight = 2
-# [[menu.feed]]
-# name = "Subscribe"
-# url = "/index.xml"
-
-
