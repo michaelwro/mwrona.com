@@ -25,14 +25,14 @@ unsafe = true
 
 # feather.js social icons
 [[params.social]]
-    name    = "GitHub"
-    icon    = "github"
-    url     = ""
-
-[[params.social]]
     name    = "LinkedIn"
     icon    = "linkedin"
-    url     = ""
+    url     = "https://www.linkedin.com/in/michael-wrona/"
+
+[[params.social]]
+    name    = "GitHub"
+    icon    = "github"
+    url     = "https://github.com/michaelwro"
 
 [[params.social]]
     name    = "YouTube"
@@ -58,24 +58,30 @@ unsafe = true
 post = "/post/:year/:month/:day/:slug/"
 
 [[menu.main]]
-    name = "experience"
+    name = "education"
     url = "/education/"
     weight = 1
 
 [[menu.main]]
-    name = "education"
-    url = "/education/"
+    name = "experience"
+    url = "/experience/"
     weight = 2
 
 [[menu.main]]
     name = "awards"
-    url = "/education/"
+    url = "/awards/"
     weight = 3
 
-[[menu.extern]]
+[[menu.main]]
+    name = "skills"
+    url = "/skills/"
+    weight = 4
+
+[[menu.main]]
     name = "blog"
-    url = "https://mwrona.com/"
-    weight = 1
+    url = "https://mwrona.com"
+    weight = 5
+
 
 # [[menu.main]]
 # name = "Categories"

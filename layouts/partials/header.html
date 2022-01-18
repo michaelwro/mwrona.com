@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    {{ if (isset .Site.Params "social") -}}
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    {{ end }}
+
+    {{- if isset .Site.Params "favicon" -}}
+      <link rel="icon" type="image/x-icon+png+svg" href="{{ .Site.Params.Favicon }}">
+    {{- end -}}
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    <meta name="description" content="{{ .Site.Params.Description }}">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
+    {{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{- end }}
+    {{ partial "head_custom.html" . }}
+  </head>
+
+  <body>
+    <br/>

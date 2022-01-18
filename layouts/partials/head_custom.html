@@ -1,0 +1,27 @@
+<header>
+
+  <nav>
+    <ul>
+      {{ $title := lower .Title }}
+      {{ $section := lower .Section }}
+      <li class="left-terminal">
+        <a href="{{ .Site.BaseURL }}">visitor@mwrona.com </a>
+      </li>
+      {{ range .Site.Menus.main }}
+      {{ $name := lower .Name }}
+      <li class="pull-left {{ if eq $name $title }}current{{ else if eq $section $name }}current{{ else if eq $title (pluralize $name) }}current{{ end }}">
+        <a href="{{ .URL }}">~/{{ lower .Name }}</a>
+      </li>
+      {{end}}
+
+
+      <ul class="right-icons">
+        {{- range $index, $key := .Site.Params.Social -}}
+        <a href="{{ $key.url }}" title="{{ $key.name }}" target="_blank" rel="noopener noreferrer"><i data-feather="{{ $key.icon }}" width=22></i></a>
+        {{end}}
+      </ul>
+      
+
+    </ul>
+  </nav>
+</header>
